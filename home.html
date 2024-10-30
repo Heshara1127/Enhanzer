@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management Interface</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="left-icons">
+            <i class="fas fa-home"></i>
+            <img src="ezuite_logo(2).jpeg" class="header-logo">
+        </div>
+    
+        <div class="center">
+            <div class="small-box"></div> <!-- Small box before eCore -->
+            <h3>Admin</h3>
+            <i class="fas fa-angle-right arrow-icon"></i> <!-- Arrow icon -->
+            <h3>User</h3>
+            <i class="fas fa-star star-icon"></i> <!-- Star icon after Employee -->
+            <i class="fas fa-file file-icon"></i> <!-- File icon after Employee -->
+        </div>
+    
+        <div class="user-info">
+            <h4>Enhanzer</h4>
+            <img src="L.jpg" class="images-logo">
+            <i class="fas fa-bell"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-cog"></i>
+        </div>
+    </header>    
+    
+    
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#"><i class="fas fa-user-shield"></i> Admin</a></li>
+                <li><a href="#"><i class="fas fa-users"></i> Core</a></li>
+                <li><a href="#"><i class="fas fa-boxes"></i> Procurement</a></li>
+                <li><a href="#"><i class="fas fa-bell"></i> Inventory</a></li>
+                <li><a href="#"><i class="fas fa-industry"></i> Manufacture</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i> Sales</a></li>
+                <li><a href="#"><i class="fas fa-dollar-sign"></i> Finance</a></li>
+                <li><a href="#"><i class="fas fa-headset"></i> Assets</a></li>
+                <li><a href="#"><i class="fas fa-clipboard-list"></i> Services</a></li>
+                <li><a href="#"><i class="fas fa-folder-open"></i> CRM</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Analytics</a></li>
+                <li><a href="#"><i class="fas fa-sign-out-alt"></i> </a></li>
+            </ul>
+        </nav>
+        
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Filters and Search -->
+            <div class="controls">
+                <div class="filters">
+                    <button onclick="filterStatus('draft')">
+                        <i class="fas fa-file-alt"></i> Draft
+                    </button>
+                    <button onclick="filterStatus('all')" class="active">
+                        <i class="fas fa-user-check"></i> Active
+                    </button>
+                    <button onclick="filterStatus('inactive')">
+                        <i class="fas fa-user-times"></i> Inactive
+                    </button>
+                    <button onclick="filterStatus('deleted')">
+                        <i class="fas fa-trash"></i> Deleted
+                    </button>
+                </div>
+            
+                <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search...">
+            
+                <div class="pagination">
+                    <span class="page-number">1</span>
+                    <span class="page-number">2</span>
+                    <span class="page-number">3</span>
+                    <!-- Add more page numbers as needed -->
+                </div>
+            </div>
+            
+
+            <!-- Employee Table -->
+            <table id="employeeTable">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Address</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Designation</th>
+                        <th>Updated</th>
+                        <th>Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-status="active">
+                        <td>John</td><td>Doe</td><td>123 Elm Street</td><td>555-1234</td><td>john.doe@example.com</td><td>Sales</td><td>Manager</td><td>2024-05-08 <br > 1.45PM</td>
+                    </tr>
+                    <tr data-status="active">
+                        <td>Jane</td><td>Smith</td><td>456 Oak Avenue</td><td>555-5678</td><td>jane.smith@example.com</td><td>Marketing</td><td>Director</td><td>2024-03-28<br > 2.10 PM</td>
+                    </tr>
+                    <tr data-status="active">
+                        <td>Alice</td><td>Jonson</td><td>789 Pine Road Elm Street</td><td>555-8765</td><td>alice.johnson@example.com</td><td>HR</td><td>Coordinator</td><td>2024-03-08<br > 2.30PM</td>
+                    </tr>
+                    <tr data-status="active">
+                        <td>Bob</td><td>Brown</td><td>321 Malpe Lane</td><td>555-2345</td><td>bob.brown@example.com</td><td>IT</td><td>Technician</td><td>2024-03-08 <br > 3.00PM</td>
+                    </tr>
+                    <tr data-status="active">
+                        <td>Charlie</td><td>Davis</td><td>654 Birch Boulevard</td><td>555-3456</td><td>charlie.davis@example.com</td><td>Finance</td><td>Analyst</td><td>2024-03-08 <br > 3.15PM</td>
+                    </tr>
+                    <tr data-status="active">
+                        <td>Eve</td><td>Miller</td><td>987 Cedar Street</td><td>555-4567</td><td>eve.miller@example.com</td><td>Operations</td><td>Supervisior</td><td>2024-03-08 <br > 3.30PM</td>
+                    </tr>
+                    <tr data-status="active">
+                        <td>Frank</td><td>Wilson</td><td>321 Spruce Way Street</td><td>555-5678</td><td>frank.wilson@example.com</td><td>Legal</td><td>Consultant</td><td>2024-03-08 <br > 3.45PM</td>
+                    </tr>
+                    <tr data-status="active">
+                        <td>Grace</td><td>Lee</td><td>321 Paim Drive </td><td>555-6789</td><td>grace.lee@example.com</td><td>Engineering</td><td>Developer</td><td>2024-03-08 <br > 4.00PM</td>
+                    </tr>
+                       <tr data-status="active">
+                        <td>Henry</td><td>Taylor</td><td>987 Fir Street</td><td>555-7890</td><td>henry.taylor@example.com</td><td>R&D</td><td>Scientist</td><td>2024-03-08 <br > 4.15PM</td>
+                    </tr>
+                    <tr data-status="active">
+                        <td>Isabel</td><td>Anderson</td><td>123 Aspen Court</td><td>555-8901</td><td>isabel.anderson@example.com</td><td>Customer Support</td><td>Agent</td><td>2024-03-08 <br > 4.30PM</td>
+                    </tr>
+                    <tr data-status="active">
+                        <td>Jack</td><td>Thomas</td><td>456 Cypress Avenue</td><td>555-9012</td><td>jack.thmas@example.com</td><td>Quality Assurance</td><td>Inspector</td><td>2024-03-08 <br > 4.45PM</td>
+                    </tr>
+                    <tr data-status="active">
+                        <td>Karen</td><td>Jackson</td><td>789 Redwood Road</td><td>555-1023</td><td>karen.jackson@example.com</td><td>Logistics</td><td>Coordinator</td><td>2024-03-08 <br > 5.00PM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <footer class="footer">
+            <p>&copy; 2024 eZuite. All rights reserved.</p>
+        </footer>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
