@@ -1,4 +1,4 @@
-/* Reset margins and padding for full page layout */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +6,8 @@
 }
 
 html, body {
-    height: 100%; /* Make the body take up the full viewport height */
-    overflow: hidden; /* Prevent scrolling */
+    height: 100%; 
+    overflow: hidden; 
 }
 
 .main-header {
@@ -18,7 +18,7 @@ html, body {
     padding: 10px 20px;
     width: 100%;
     color: white;
-    height: 60px; /* Set a fixed height for the header */
+    height: 60px;
 }
 
 .header-logo {
@@ -34,7 +34,7 @@ html, body {
     height: 40px;
     border-radius: 50%;
     overflow: hidden;
-    margin-right: 5px; /* Space between A.jpg and Enhancer Admin text */
+    margin-right: 5px;
 }
 
 .main-header .left-icons {
@@ -56,10 +56,10 @@ html, body {
 
 
 .small-box {
-    width: 20px; /* Adjust size as needed */
+    width: 20px;
     height: 20px;
-    background-color: white; /* Adjust color if needed */
-    border-radius: 4px; /* Adds rounded corners */
+    background-color: white;
+    border-radius: 4px; 
 }
 
 .center {
@@ -76,7 +76,7 @@ html, body {
 .file-icon {
     font-size: 18px;
     color: white;
-    margin-left: 10px; /* Adjusts the space between the star and file icons */
+    margin-left: 10px; 
 }
 
 
@@ -99,12 +99,11 @@ html, body {
 
 .container {
     display: flex;
-    height: calc(100% - 60px); /* Full height minus the header */
-}
+    height: calc(100% - 60px); 
 
 .sidebar {
-    width: 100px; /* Set sidebar width */
-    height: calc(100% - 60px); /* Full height minus the header */
+    width: 100px;
+    height: calc(100% - 60px);
     background: linear-gradient(180deg, #062547, #80b8f4);
     color: #fff;
     display: flex;
@@ -117,7 +116,7 @@ html, body {
 .sidebar ul li a {
     display: flex;
     align-items: center;
-    gap: 1px; /* Space between icon and text */
+    gap: 1px; 
     font-size: 12px;
     padding: 10px;
     color: #333;
@@ -126,8 +125,7 @@ html, body {
 }
 
 .sidebar ul li a:hover {
-    color: #007bff; /* Hover color */
-}
+    color: #007bff; 
 
 
 .sidebar ul {
@@ -148,23 +146,23 @@ html, body {
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    color: #fefefe; /* Customize color as needed */
+    color: #fefefe;
 }
 
 .sidebar ul li a i {
-    font-size: 1.5em; /* Adjust icon size */
-    margin-bottom: 5px; /* Space between icon and text */
+    font-size: 1.5em; 
+    margin-bottom: 5px; 
 }
 
 .sidebar ul li a:hover {
-    color: #007bff; /* Customize hover color */
+    color: #007bff; 
 }
 
 .content {
     flex-grow: 1;
     padding: 20px;
     overflow-y: auto;
-    background-color: #f3f3f3; /* Optional background for the main content */
+    background-color: #f3f3f3;
 }
 
 .controls {
@@ -193,12 +191,12 @@ html, body {
 
 .filters button.active {
     background-color: white;
-    color: #000000; /* Change text color to match inactive button's background */
+    color: #000000;
 }
 
 
 .filters button i {
-    font-size: 18px; /* Icon size */
+    font-size: 18px; 
 }
 
 .filters button:hover {
@@ -226,28 +224,27 @@ html, body {
 }
 
 #employeeTable thead {
-    background-color: #ffffff; /* Header background color */
+    background-color: #ffffff;
     color: rgb(84, 151, 227);
 }
 
 #employeeTable tbody tr:nth-child(odd) {
-    background-color: #ececec; /* Light gray for odd rows */
+    background-color: #ececec; 
     
 }
 
 #employeeTable tbody tr:nth-child(even) {
-    background-color: #ffffff; /* White for even rows */
+    background-color: #ffffff;
    
 }
 
 /* Hover effect for rows */
 #employeeTable tbody tr:hover {
-    background-color: #e0e0e0; /* Slightly darker gray on hover */
-}
+    background-color: #e0e0e0;
 
 /* Hover effect for rows */
 #employeeTable tbody tr:hover {
-    background-color: #e0e0e0; /* Slightly darker gray on hover */
+    background-color: #e0e0e0; 
 }
 
 .footer {
