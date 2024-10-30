@@ -8,7 +8,7 @@ function filterStatus(status) {
         }
     });
 
-    // Update active button
+   
     document.querySelectorAll(".filters button").forEach(btn => btn.classList.remove("active"));
     document.querySelector(`.filters button[onclick="filterStatus('${status}')"]`).classList.add("active");
 }
@@ -34,15 +34,13 @@ const filterButtons = document.querySelectorAll('.filters button');
 
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Remove the active class from all buttons
         filterButtons.forEach(btn => btn.classList.remove('active'));
-        // Add the active class to the clicked button
         button.classList.add('active');
     });
 });
 
 
-    // Function to auto-generate numbers in the table
+ 
     function autoGenerateNumbers() {
         const table = document.getElementById("employeeTable");
         const rows = table.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
@@ -54,6 +52,6 @@ filterButtons.forEach(button => {
         }
     }
 
-    // Call the function after the page loads
+
     window.onload = autoGenerateNumbers;
 
